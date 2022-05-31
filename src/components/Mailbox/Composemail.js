@@ -2,12 +2,18 @@ import { Button } from "@mui/material";
 import React, { useState } from "react";
 import "../../styles/ComposeMail.css";
 import SendIcon from "@mui/icons-material/Send";
+import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+// import  closeToSendMsg  from "../../redux-store";
+import { uiActions } from "../../redux-store/Ui-Slice";
 
 const Composemail = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const dispatch = useDispatch();
+
 
   const composeHandler = (e) => {
     e.preventDefault();
@@ -39,7 +45,9 @@ const Composemail = () => {
         <div className="compose__header__left">
           <span>New Message</span>
         </div>
-        <div className="compose__header__right">close</div>
+        <div className="compose__header__right">
+             <CloseIcon onClick={() => dispatch(uiActions.closeToSendMsg())}/>
+        </div>
       </div>
       <form onSubmit={composeHandler}>
         <div className="compose__body">
