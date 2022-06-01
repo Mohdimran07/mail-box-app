@@ -1,0 +1,35 @@
+.sideView-menu {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.sentmails {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+.sentmails:hover {
+    box-shadow: 2px 2px 4px whitesmoke;
+    cursor: pointer;
+    background-color: rgb(201, 224, 247);
+  }
+
+.sentmails__left {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  flex: 20%;
+}
+
+.sentmails__left h4 {
+  font-size: 14px;
+}
+
+.sentmails__middle {
+  display: flex;
+  align-items: center;
+  flex: 90%;
+}
