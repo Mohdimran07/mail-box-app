@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.email-data{
+  display: grid;
+  
+}
+
 .emaillist__settings {
   display: flex;
   align-items: center;

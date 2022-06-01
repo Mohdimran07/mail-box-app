@@ -10,7 +10,8 @@ const Sidebar = () => {
   return (
     <div>
             <Button className='compose__btn' onClick={() => dispatch(uiActions.openToSendMsg())} >compose</Button>
-      <Sidebaroptions  title="Inbox" number="3" isActive={true} />
+          
+      <Sidebaroptions  title="Inbox"  isActive={true} />
       <Sidebaroptions  title="Unread"  />
       <Sidebaroptions  title="Starred"  />
       <Sidebaroptions  title="Drafts"  />

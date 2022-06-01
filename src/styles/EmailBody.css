@@ -33,7 +33,7 @@
 }
 .emailbody__middle .emailbody__middle__msg {
   display: flex;
-  width: 90%;
+  width: 70%;
 }
 .emailbody__middle p {
   font-size: 15px;

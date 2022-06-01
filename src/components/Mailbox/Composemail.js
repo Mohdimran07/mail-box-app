@@ -64,7 +64,7 @@ const Composemail = () => {
               onChange={(e) => setSubject(e.target.value)}
               placeholder="Subject"
             />{" "}
-            {message}
+            
             <textarea
               rows={"34"}
               onChange={(e) => setMessage(e.target.value)}

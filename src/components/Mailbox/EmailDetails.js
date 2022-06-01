@@ -9,9 +9,27 @@ import "../../styles/EmailDetails.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
+
 const EmailDetails = () => {
   const mail = useSelector((state) => state.ui.selectedMessage);
+  console.log(mail);
+  console.log(mail.message);
   const navigate = useNavigate();
+// useEffect(() => {
+//   const string = localStorage.getItem("id");
+//   let email = string.replace(/[&,+()$~%@.'":*?<>{}]/g, "");
+//     console.log(mail.message)
+//   axios
+//     .put(`https://userdatamailbox-default-rtdb.firebaseio.com/${email}.json`, {
+//        name: mail.name,
+//        Subject: mail.subject,
+//        message: mail.message
+//     })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => console.log(err));
+// }, [])
 
   return (
     <div>
@@ -32,7 +50,7 @@ const EmailDetails = () => {
               <IconButton>
                 <PrintIcon />
               </IconButton>
-              <p>{mail.time}</p>
+            
               <IconButton>
                 <StarOutlineIcon />
               </IconButton>

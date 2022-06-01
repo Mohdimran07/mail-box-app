@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { authActions } from '../redux-store/auth';
 import '../styles/Login.css';
 
 
@@ -8,6 +10,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const loginHandler = async(e) => {
         e.preventDefault();
@@ -19,8 +22,9 @@ const Login = () => {
             })
             if(response){
                 console.log(response)
+                localStorage.setItem("id", response.data.email)
+                  dispatch(authActions.login(response.data.idToken))
                   navigate("/")
-                  localStorage.setItem("id", response.data.email)
                 console.log("user logged in");
             }
         }catch(error){
